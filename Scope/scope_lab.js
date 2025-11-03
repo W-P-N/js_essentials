@@ -26,6 +26,26 @@ function show(){
     }
     show();
     
-    console.log(functionVar); // Throws ReferenceError
-    console.log(functionLet); // Throws ReferenceError
-    console.log(functionConst); // Throws ReferenceError
+    // console.log(functionVar); // Throws ReferenceError
+    // console.log(functionLet); // Throws ReferenceError
+    // console.log(functionConst); // Throws ReferenceError
+
+{
+    var thisVar = "Test in block thisVar";
+    let thisLet = "Test in block thisLet";
+    const thisConst = "Test in block thisConst";
+
+    // Reassignment
+    thisVar = "Reassign in block thisVar";
+    thisLet = "Reassign in block thisLet";
+    // thisConst = "Reassign in block thisConst";
+}
+
+// Re-assignment outside block
+thisVar = "Reassign out of block thisVar";
+thisLet = "Reassign out of block thisLet";
+thisConst = "Reassign out of block thisConst";
+
+console.log(thisVar);
+console.log(thisLet);
+console.log(thisConst);
